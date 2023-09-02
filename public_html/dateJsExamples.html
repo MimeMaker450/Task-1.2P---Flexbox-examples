@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <Head>
+        <link rel="stylesheet" href="./styles.css">
+        <script type="text/javascript" src="main.js"></script>
+        <title> 
+            1.2P JS Examples - Dates
+        </title>
+        <meta name="Description" content="Main Page for Second Submission for SIT102">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </Head>
+    <body>
+        <div>
+            <ul class="inline">
+                <li class="inline"><a href="index.html">Home</a></li>
+                <li class="inline"><a href="reponsiveExample.html">Responsive Design Example</a></li>
+                <li class="inline"><a href="numberJsExamples.html">numberJsExamples</a></li>
+                <li class="inline"><a href="arrayJsExamples.html">arrayJsExamples</a></li>
+                <li class="inline"><a href="dateJsExamples.html">dateJsExamples</a></li>
+            </ul>
+        </div>
+        <div>
+
+            <h1> Lets take a look at Dates in javascript </h1>
+
+            <p>A Date is considered an object and would need to be assigned to a value to be used. <br>
+               The following example will display the current date and time reletive to the user viewing it by default:</p>
+            <p id="DateOutput_Example1"></p>
+            <script>
+                const exampleDate = new Date();
+                document.getElementById("DateOutput_Example1").innerHTML = exampleDate;
+            </script>
+            <br>
+        </div>
+        <div>
+            <p>You can display a specific date by clarifying it in the "new Date()"'s parameters, creating a "date string":</p>
+            <p id="DateOutput_Example2"></p>
+            <script>
+                const exampleDate1 = new Date("2023-08-30");
+                document.getElementById("DateOutput_Example2").innerHTML = exampleDate1;
+            </script>
+            <br>
+        </div>
+        <div>
+            <p>Going even further, you can specify every element of the date in the following format: <br><br><br>
+                Year, Month, Day, Hour, Minute, Seconds, Milliseconds (Milliseconds won't be displayed). <br><br><br>
+                You can choose to only put in values up to how specific you want but the values will be read in the above order. </p>
+            <p id="DateOutput_Example3"></p>
+            <script>
+                const exampleDate2 = new Date(2015, 2, 13, 12, 30, 15, 1);
+                document.getElementById("DateOutput_Example3").innerHTML = exampleDate2;
+            </script>
+            <br>
+        </div>
+    </body>
+    <div>
+        <p>If you wanted to specify a year in the 20th century (1900s), you would put the year at a value like '20' or '5':</p>
+        <p id="DateOutput_Example4"></p>
+        <script>
+            const exampleDate3 = new Date(20, 8, 21);
+            document.getElementById("DateOutput_Example4").innerHTML = exampleDate3;
+        </script>
+        <br>
+    </div>
+    <div>
+        <p>If you wanted to specify a year in the 20th century (1900s), you would put the year at a value like '20' or '5':</p>
+        <p id="DateOutput_Example5"></p>
+        <script>
+            const exampleDate4 = new Date(20, 8, 21);
+            document.getElementById("DateOutput_Example5").innerHTML = exampleDate4;
+        </script>
+        <br>
+    </div>
+    <div>
+        <p>If you are absolutely posessed, you can also calculate a specific date using milliseconds from "The Epoch" (January 01 1970 (when time calculations start)). <br>
+            The representation of September 09 2001 at 11:55:00 would be calculated as 1,000,000,500,002 from "The Epoch" in Unix as shown below:</p>
+        <p id="DateOutput_Example6"></p>
+        <script>
+            const exampleDate5 = new Date(1000000500002);
+            document.getElementById("DateOutput_Example6").innerHTML = exampleDate5;
+        </script>
+        <br>
+    </div>
+
+</body>
+</html>

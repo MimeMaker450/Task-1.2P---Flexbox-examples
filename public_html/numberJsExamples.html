@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <Head>
+        <link rel="stylesheet" href="./styles.css">
+        <script type="text/javascript" src="main.js"></script>
+        <title> 
+            1.2P JS Examples - Numbers
+        </title>
+        <meta name="Description" content="Main Page for Second Submission for SIT102">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </Head>
+    <body>
+        <div>
+            <ul class="inline">
+                <li class="inline"><a href="index.html">Home</a></li>
+                <li class="inline"><a href="reponsiveExample.html">Responsive Design Example</a></li>
+                <li class="inline"><a href="numberJsExamples.html">numberJsExamples</a></li>
+                <li class="inline"><a href="arrayJsExamples.html">arrayJsExamples</a></li>
+                <li class="inline"><a href="dateJsExamples.html">dateJsExamples</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3> Sample Data for Number Methods </h3>
+            <p id="Numbers">1,2,3,4,5</p>
+            <br>
+        </div>
+        <div>
+            <p>Some addition to start with, 15 + 42 = :</p>
+            <p id="NumberOutput_Example1"></p>
+            <script>
+                let value1 = 15;
+                let value2 = 42;
+                let answer = value1 + value2;
+                document.getElementById("NumberOutput_Example1").innerHTML = answer;
+            </script>
+            <br>
+        </div>
+        <div>
+            <p>Lets see what happens if we feed String numbers into the formula, 6 x 12:</p>
+            <p id="NumberOutput_Example2"></p>
+            <script>
+                let value3 = "6";
+                let value4 = "12";
+                let answer1 = value3 * value4;
+                document.getElementById("NumberOutput_Example2").innerHTML = answer1;
+            </script>
+            <br>
+        </div>
+        <div>
+            <p>Lets interperate some hexidecimal</p>
+            <p id="NumberOutput_Example3"></p>
+            <script>
+                let value5 = 0xDC;
+                let value6 = 0xFF;
+                document.getElementById("NumberOutput_Example3").innerHTML = "0xDC = " + value5 + " and 0xFF = " + value6;
+            </script>
+            <br>
+        </div>
+        <div>
+            <p>Lets see how many steps it takes for 2 to equal 10:</p>
+            <p id="NumberOutput_Example4"></p>
+            <script>
+                let mainNumber = 2;
+                let textExample6 = "";
+                let stepNumber = 0;
+                while (mainNumber != 10){
+                    mainNumber = mainNumber + 2;
+                    stepNumber = stepNumber + 1;
+                    textExample6 = "step number: " + stepNumber + " Value of: " + mainNumber + "<br>";
+                }
+                document.getElementById("NumberOutput_Example4").innerHTML = textExample6;
+            </script>
+            <br>
+        </div>
+        <div>
+            <p>Lets take a number value and convert it to a string:</p>
+            <p id="NumberOutput_Example5"></p>
+            <script>
+                let mainNumber1 = 253;
+                document.getElementById("NumberOutput_Example5").innerHTML = "The main number is "+ mainNumber1.toString() + "<br>" + "And if it is divided by 2, it equals: " + (mainNumber1 / 2).toString();
+            </script>
+            <br>
+        </div>
+        <div>
+            <p>If we wanted to constrict a number to have only 2 decimal places, we would fix it to 2 places:</p>
+            <p id="NumberOutput_Example6"></p>
+            <script>
+                let mainNumber2 = 952.5321;
+                document.getElementById("NumberOutput_Example6").innerHTML = "The main number is "+ mainNumber2.toString() + "<br>" + "When fixing it to two decimal places, it becomes: " + mainNumber2.toFixed(2);
+            </script>
+            <br>
+        </div>
+        <div>
+            <p>Another consideration is if we only wanted a number to display a certain length of characters:</p>
+            <p id="NumberOutput_Example7"></p>
+            <script>
+                let mainNumber3 = 23051.4320;
+                document.getElementById("NumberOutput_Example7").innerHTML = "The main number is "+ mainNumber3.toString() + "<br>"
+                + "if we only wanted to see a number with the length of 2, it becomes: " + mainNumber3.toPrecision(2) + "<br>" + 
+                "if we wanted to see the number with a length of 8, it becomes: " + mainNumber3.toPrecision(8);
+            </script>
+            <br>
+        </div>
+        <div>
+            <p>What if we wanted to take a variable like text and convert it into a float value:</p>
+            <p id="NumberOutput_Example8"></p>
+            <script>
+                let textExample7 = "100.752";
+                let mainNumber4 = parseFloat(textExample7) 
+                document.getElementById("NumberOutput_Example8").innerHTML = "The text value is: " + textExample7 + "<br>" 
+                + "And the float value is: " + mainNumber4;
+            </script>
+            <br>
+        </div>
+        <div>
+            <p>Using the "valueOf()" function allows us to read numbers to a console or webpage:</p>
+            <p id="NumberOutput_Example9"></p>
+            <script>
+                let mainNumber5 = 42104;
+                document.getElementById("NumberOutput_Example9").innerHTML = "The Original number is: " + mainNumber5 + "<br>"
+                + "The value of " + mainNumber5 + " is tied to 'mainNumber5', when viewing its value through the valueOf() affix you get: " + mainNumber5.valueOf() + "<br><br>"
+                + "This can also work just with a container with an arguement within it like '100 / 25' which equals: " + (100 / 25).valueOf();
+            </script>
+            <br>
+        </div>
+    </body>

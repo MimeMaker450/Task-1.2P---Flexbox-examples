@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <Head>
+        <link rel="stylesheet" href="./styles.css">
+        <script type="text/javascript" src="main.js"></script>
+        <title> 
+            1.2P JS Examples - Strings
+        </title>
+        <meta name="Description" content="Main Page for Second Submission for SIT102">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </Head>
+    <body>
+        <div>
+            <ul class="inline">
+                <li class="inline"><a href="index.html">Home</a></li>
+                <li class="inline"><a href="reponsiveExample.html">Responsive Design Example</a></li>
+                <li class="inline"><a href="numberJsExamples.html">numberJsExamples</a></li>
+                <li class="inline"><a href="arrayJsExamples.html">arrayJsExamples</a></li>
+                <li class="inline"><a href="dateJsExamples.html">dateJsExamples</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3> Sample Data for String Methods </h3>
+            <p id="Text">John, Oscar, Nicolas, Ethan, Shaun</p>
+            <br>
+        </div>
+        <div>
+            <p>The total length of the String Sample Data in characters:</p>
+            <p id="StringOutput_Example1"></p>
+            <script>
+                let textExample1= "John, Oscar, Nicolas, Ethan, Shaun";
+                document.getElementById("StringOutput_Example1").innerHTML = textExample1.length;
+            </script>
+            <br>
+        </div>
+        <div>
+            <p>A select slice() of the String Sample Data is:</p>
+            <p id="StringOutput_Example2"></p>
+            <script>
+                let textExample2= "John, Oscar, Nicolas, Ethan, Shaun";
+                let partExample2= textExample2.slice(21);
+                document.getElementById("StringOutput_Example2").innerHTML = partExample2;
+            </script>
+            <br>
+        </div>
+        <div>
+            <p>When I want to replace John with Shaun, I just click the button below:</p>
+            
+            <button type="button" onclick="peopleReplacer()"> Click Me!</button>
+            <p id="StringOutput_Example3"> Hi, my name is John</p>
+            <script>
+                function peopleReplacer(){
+                let textExample3 = document.getElementById("StringOutput_Example3").innerHTML;
+                document.getElementById("StringOutput_Example3").innerHTML = textExample3.replace("John","Shaun");
+                }
+            </script>
+            <br>
+        </div>
+        <div>
+            <p>Personally I prefer when the sky is clear of clouds, click below to remove their mention:</p>
+
+            <button type="button" onclick="removeClouds()"> Click Me!</button>
+            <p id="StringOutput_Example4">When I go out, the sky is full of clouds as far as the eye can see.</p>
+            <script>
+                function removeClouds(){
+                let textExample4= document.getElementById("StringOutput_Example4").innerHTML;
+                document.getElementById("StringOutput_Example4").innerHTML = textExample4.replaceAll(/clouds/g,"blue")
+                }
+            </script>
+            <br>
+        </div>
+        <div>
+            <p>The following Method combines two string objects together:</p>
+            <p id="StringOutput_Example5"></p>
+            <script>
+                let textExample5A= "To";
+                let textExample5B= "Be";
+                let textExample5C= "Continued";
+                let Combine= textExample5A.concat(" ",textExample5B," ",textExample5C);
+                document.getElementById("StringOutput_Example5").innerHTML = Combine;
+            </script>
+            <br>
+        </div>
+        <h2> Please Continue to "numberJsExamples" page to continue </h2>             
+</html>

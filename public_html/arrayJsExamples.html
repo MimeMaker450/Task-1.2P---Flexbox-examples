@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <Head>
+        <link rel="stylesheet" href="./styles.css">
+        <script type="text/javascript" src="main.js"></script>
+        <title> 
+            1.2P JS Examples - Arrays
+        </title>
+        <meta name="Description" content="Main Page for Second Submission for SIT102">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </Head>
+    <body>
+        <div>
+            <ul class="inline">
+                <li class="inline"><a href="index.html">Home</a></li>
+                <li class="inline"><a href="reponsiveExample.html">Responsive Design Example</a></li>
+                <li class="inline"><a href="numberJsExamples.html">numberJsExamples</a></li>
+                <li class="inline"><a href="arrayJsExamples.html">arrayJsExamples</a></li>
+                <li class="inline"><a href="dateJsExamples.html">dateJsExamples</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3> Sample Data for Array Methods </h3>
+            <p id="egNumbers">1,2,3,4,5</p>
+            <p id="egText">John, Oscar, Nicolas, Ethan, Shaun</p>
+            <p id="egMixture">John, 1, Nicolas, 4, Shaun</p>
+            <br>
+        </div>        
+    </body>
+    <div>
+        <p>Lets convert a array mixture of names and numbers into a Array String using .toString():</p>
+        <p id="ArrayOutput_Example1"></p>
+        <script>
+            const arrayElements = ["John", 1, "Nicolas", 4, "Shaun"];
+            document.getElementById("ArrayOutput_Example1").innerHTML = arrayElements.toString();
+        </script>
+        <br>
+    </div>
+    <div>
+        <p>As an extension to the ".toString()" Method of reading Array elements to a string, <br> 
+            you can use ".Join()" to add in a seporator (like " and ") to each entry:</p>
+        <p id="ArrayOutput_Example2"></p>
+        <script>
+            const arrayElements1 = ["John", 1, "Nicolas", 4, "Shaun"];
+            document.getElementById("ArrayOutput_Example2").innerHTML = arrayElements1.join(" and ");
+        </script>
+        <br>
+    </div>
+    <div>
+        <p>Lets take a look at the ".pop()" Method for arrays, it removes the last array entry when used:</p>
+
+        <button type="button" onclick="removeEndElement()"> Click Me!</button>
+        <p id="ArrayOutput_Example3">John, 1, Nicolas, 4, Shaun</p>
+        <script>
+            function removeEndElement(){
+            const arrayElements2 = ["John", 1, "Nicolas", 4, "Shaun"];
+            arrayElements2.pop();
+            document.getElementById("ArrayOutput_Example3").innerHTML = arrayElements2;
+            }
+        </script>
+        <br>
+    </div>
+    <div>
+        <p>If you wanted to add another array value, you can use the ".push()" Method to add one to the end of an array:</p>
+
+        <button type="button" onclick="addEndElement()"> Click Me!</button>
+        <p id="ArrayOutput_Example4">John, 1, Nicolas, 4, Shaun</p>
+        <script>
+            function addEndElement(){
+            const arrayElements3 = ["John", 1, "Nicolas", 4, "Shaun"];
+            arrayElements3.push(6);
+            document.getElementById("ArrayOutput_Example4").innerHTML = arrayElements3;
+            }
+        </script>
+        <br>
+    </div>
+    <div>
+        <p>If you want to remove a array element from the first entry, use the ".shift()" function:</p>
+
+        <button type="button" onclick="removeStartElement()"> Click Me!</button>
+        <p id="ArrayOutput_Example5">John, 1, Nicolas, 4, Shaun</p>
+        <script>
+            function  removeStartElement(){
+            const arrayElements4 = ["John", 1, "Nicolas", 4, "Shaun"];
+            arrayElements4.shift();
+            document.getElementById("ArrayOutput_Example5").innerHTML = arrayElements4;
+            }
+        </script>
+        <br>
+    </div>
+    <div>
+        <p>Quite fittingly, if you want to add an array value to the start of the array, use the ".unshift()" function:</p>
+
+        <button type="button" onclick="addStartElement()"> Click Me!</button>
+        <p id="ArrayOutput_Example6">John, 1, Nicolas, 4, Shaun</p>
+        <script>
+            function  addStartElement(){
+            const arrayElements5 = ["John", 1, "Nicolas", 4, "Shaun"];
+            arrayElements5.unshift(0);
+            document.getElementById("ArrayOutput_Example6").innerHTML = arrayElements5;
+            }
+        </script>
+        <br>
+    </div>
+</html>
